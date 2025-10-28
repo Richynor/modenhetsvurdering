@@ -15,7 +15,7 @@ st.set_page_config(
 
 # Prøv å laste Bane NOR logo
 try:
-    st.sidebar.image("bane_nor_logo.png.jpg", use_column_width=True)
+    st.sidebar.image("bane_nor_logo.png.jpg", use_container_width=True)
 except FileNotFoundError:
     st.sidebar.markdown("""
     <div style='text-align: center; color: #BA0C2F;'>
@@ -1132,7 +1132,7 @@ def generate_report():
     return "\n".join(report)
 
 def main():
-    st.title("🎯 Modenhetsvurdering - Gevinstrealisering")
+    st.title(" Modenhetsvurdering - Gevinstrealisering")
     st.markdown("Interaktiv vurdering av modenhet i gevinstrealisering gjennom fire faser")
     st.markdown("---")
     
@@ -1141,7 +1141,7 @@ def main():
     
     # Sidebar for navigasjon og oversikt
     with st.sidebar:
-        st.header("📊 Oversikt")
+        st.header(" Oversikt")
         
         selected_phase = st.selectbox(
             "Velg fase:",
@@ -1264,7 +1264,7 @@ def main():
         )
         
         # Forbedringsområder
-        st.subheader("🎯 Forbedringsområder")
+        st.subheader(" Forbedringsområder")
         improvement_found = False
         
         for phase in phases_data:
