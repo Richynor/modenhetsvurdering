@@ -8,11 +8,21 @@ import json
 
 # Konfigurer siden
 st.set_page_config(
-    page_title="Modenhetsvurdering Gevinstrealisering",
-    page_icon="📊",
-    layout="wide",
-    initial_sidebar_state="expanded"
+    page_title="PRO20: Gevinstrealisering - Modenhetsvurdering",
+    page_icon=" ",
+    layout="wide"
 )
+
+# Prøv å laste Bane NOR logo
+try:
+    st.sidebar.image("bane_nor_logo.png.jpg", use_column_width=True)
+except FileNotFoundError:
+    st.sidebar.markdown("""
+    <div style='text-align: center; color: #BA0C2F;'>
+        <h1> </h1>
+        <h3>Bane NOR</h3>
+    </div>
+    """, unsafe_allow_html=True)
 
 # Komplett spørresett fra dokumentet ditt
 phases_data = {
